@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XFSQLiteDemo.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Title}">
+
+    <StackLayout
+        BackgroundColor="Aquamarine"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand">
+        <Entry Placeholder="First Name" Text="{Binding FirstName}" />
+
+        <Entry Placeholder="Last Name" Text="{Binding LastName}" />
+        <Entry Placeholder="Email" Text="{Binding Email}" />
+        <Entry
+            IsPassword="True"
+            Placeholder="Password"
+            Text="{Binding Password}" />
+        <Entry IsPassword="True" Placeholder="Confirm Password" />
+        <Label Text="Date Of Birth" />
+        <DatePicker Date="{Binding DOB}" />
+        <Label Text="Address" />
+        <Editor Text="{Binding Address}" />
+        <StackLayout Orientation="Horizontal">
+            <Button Command="{Binding SignUpCommand}" Text="Sign Up" />
+            <Button Command="{Binding DisplayDataCommand}" Text="show" />
+        </StackLayout>
+        <Label Text="Already have account? Sign In" TextColor="Blue" />
+    </StackLayout>
+
+</ContentPage>
